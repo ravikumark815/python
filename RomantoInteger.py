@@ -33,8 +33,9 @@ def romanToInt(s):
     }
     res = 0
     i = 0
-    while(i <= len(s)-1):
-        if (i < len(s)-1) and (romInts[s[i+1]]) > (romInts[s[i]]):
+    n = len(s)-1
+    while(i <= n):
+        if (i < n) and (romInts[s[i+1]]) > (romInts[s[i]]):
             res = res + (romInts[s[i+1]] - romInts[s[i]])
             # print("i:", i, "s[i+1]:", romInts[s[i+1]],"s[i]:", romInts[s[i]], "res:", res)
             i = i + 2
